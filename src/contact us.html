@@ -6,95 +6,115 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="contactus.css">
 </head>
 
 <body>
-  
-  <header>
-    <div>
-      <nav>
-        <img src="images/logo.png" alt="course101 logo" width="35px" height="35px" />
-        <div>
-          <a href="home.html">Home</a>
-          <a href="courses.html">Courses</a>
-          <a href="premium.html">Premium</a>
-          <a href="on demand.html">Ondemand</a>
-          <a href="about.html">About</a>
-          <a href="contact us.html">Contact us</a>
-
-
-        </div>
+  <header class="header">
+    <div class="header__head">
+      <img src="images/Newfolder/logo.jpg" alt="course101 logo" class="header__img" />
+      <h1 class="header__name">COURSE101</h1>
+    </div>
+    <div class="header__container">
+      <button id="menubutton" class="header__menu"></button>
+      <nav id="menu" class="header__navmenu">
+        <a href="home.html" class="header__link">Home</a>
+        <a href="courses.html" class="header__link">Courses</a>
+        <a href="premium.html" class="header__link">Premium</a>
+        <a href="on demand.html" class="header__link">Ondemand</a>
+        <a href="about.html" class="header__link">About</a>
+        <a href="contact us.html" class="header__link" id="header__link">Contact us</a>
       </nav>
     </div>
-    <h1>Contact form</h1>
+    <script>
+      const menubutton = document.getElementById('menubutton');
+      const menu = document.getElementById('menu');
+      let flag = true;
+
+      menubutton.addEventListener('click', (event) => {
+        console.log('abebe', menu.style.display);
+        if (flag) {
+          menu.style.display = 'flex';
+        } else {
+          menu.style.display = 'none';
+        }
+        flag = !flag;
+      });
+    </script>
+    <br> <br><br><br> <br> <br> <br>
+    <div class="header__last"> <br> <br> <br>
+      <h1 class="header__motto">QUALITY EDUCATION FOR EVERYONE</h1>
+      <h2 class="header__mott">Thousands of videos for free</h2>
+    </div>
   </header>
-  <main>
-    
-      <form>
-        <div>
-          <div>
-            <label for="first">First Name</label>
-            <input type="text" id="first" required />
-          </div>
-          <div>
-            <label for="last">Last Name</label>
-            <input type="text" id="last" required />
-          </div>
-          <div>
-            <label for="phone">Telephone</label>
-            <input type="tel" id="phone" required />
-
-          </div>
-      
-          <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" required />
-          </div>
+  <main class="main">
+    <form class="main__formm" id="form">
+      <div class="main__divbox">
+        <div class="main__form main__form1">
+          <label for="first" class="main__lab">First Name</label><br>
+          <input type="text" id="first" required onblur="validatefirstName()"><span id="firstnameError"></span><br>
         </div>
-      
-        <div>
-          <label for="message">Message</label>
-          <textarea id="message"></textarea>
+        <div class="main__form main__form2">
+          <label for="last">Last Name</label><br>
+          <input type="text" id="last" required onblur="validatelastName()"><span id="lastnameError"></span><br>
         </div>
-
-        <button>Submit</button>
-      </form>
-        <br>
-        <div>
-          <h2>Come visit us in person
-          </h2>
-          <p>
-            come visit us at our head office located 2nd floor,chaka mall. its foud 100 meters left of addis ababa stadium.
-          </p>
-          <p>Email us at Course101@gmail.com</p>
+        <div class="main__form main__form3">
+          <label for="phone">Telephone</label><br>
+          <input type="text" id="phone" required name="phonenumber" onblur="validatePhoneNumber()"><span
+            id="phoneNumberError"></span><br>
 
         </div>
 
-      </div>
-      </main>
-      <hr>
 
-  <footer>
-    <div>
-      <h3>CONTACT</h3>
-      <p>CITY:ADDIS ABABA</p>
-      <p>PHONE NUMBER:+251993535512</p>
-      <p>EMAIL:Course101@gmail.com</p>
-      <div>
-        <p>FAQ</p>
-        <p><a href=PRIVACY.HTML>PRIVACY POLICY</a></p>
-        <p>TERMS OF SERVICE</p>
+
+        <div class="main__form main__form4">
+          <label for="email">Email</label><br>
+          <input type="email" id="email" required onblur="validateEmail()"><span id="emailError"></span><br>
+        </div>
+        <div class="main__label">
+          <label for="message" class="main__message">Message</label> <br>
+          <textarea id="message" name="Messages" onblur="validateMessage()"></textarea><span
+            id="messageError"></span><br>
+        </div>
+        <button class="main__button">Submit</button>
       </div>
-      <div>
-        <h2>FOLLOW US ON</h2>
-        <img src="images/socialmedia.jpg" alt="social links" width="110px" height="26px">
-        <p>&copy;2022 courses101,all rights reserved.</p>
-      </div>
+    </form>
+    <br>
+    <div class="main__text">
+      <h2>Come visit us in person <br><br>
+      </h2>
+      <p>
+        come visit us at our head office located 2nd floor,chaka mall. <br>its found 100 meters left of addis ababa
+        stadium.
+      </p>
+      <p class="main__para">Email us at Course101@gmail.com</p>
 
     </div>
-</footer>
 
+  </main>
+  <hr>
 
+  <footer class="footer">
+    <div class="footer__column0">
+      <h3 class="footer__block">CONTACT</h3>
+      <p class="footer__para">CITY:ADDIS ABABA</p>
+      <p class="footer__para">PHONE NUMBER:+251993535512</p>
+      <p class="footer__para">EMAIL:Course101@gmail.com</p>
+    </div>
+    <div class="footer__column1">
+      <p class="footer__para">FAQ</p>
+      <p class="footer__para">
+        <a href=PRIVACY.HTML class="footer__link">PRIVACY POLICY</a>
+      </p>
+      <p class="footer__para">TERMS OF SERVICE</p>
+    </div>
+    <div class="footer__column2">
+      <h2 class="footer__block">FOLLOW US ON</h2>
+      <img src="images/socialmedia.jpg" alt="social links" width="110px" height="26px">
+      <p class="footer__para">&copy;2022 courses101,all rights reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>
