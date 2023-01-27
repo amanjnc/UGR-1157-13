@@ -1,140 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <header class="header" >
+    <style>
+      .header{
+        
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="premium.css">
-</head>
-
-<body>
-  <header class="header">
-    <div class="header__head">
-      <img src="images/Newfolder/logo.jpg" alt="course101 logo" class="header__img" />
-      <h1 class="header__name">COURSE101</h1>
+      background-image: url("images/Newfolder/bg.png");
+    background-repeat: no-repeat;
+     
+  }
+  body{
+    background-color:rgb(10, 10, 10);
+  }
+  .p{
+    font-size:larger;
+  }
+     </style>
+    <div>
+      <h1>COURSE101</h1>
     </div>
-    <div class="header__container">
-      <button id="menubutton" class="header__menu"></button>
-      <nav id="menu" class="header__navmenu">
-        <a href="home.html" class="header__link">Home</a>
-        <a href="courses.html" class="header__link">Courses</a>
-        <a href="premium.html" class="header__link" id="header__link">Premium</a>
-        <a href="on demand.html" class="header__link">Ondemand</a>
-        <a href="about.html" class="header__link">About</a>
-        <a href="contact us.html" class="header__link">Contact us</a>
-      </nav>
-    </div>
-    <script>
-      const menubutton = document.getElementById('menubutton');
-      const menu = document.getElementById('menu');
-      let flag = true;
 
-      menubutton.addEventListener('click', (event) => {
-        console.log('abebe', menu.style.display);
-        if (flag) {
-          menu.style.display = 'flex';
-        } else {
-          menu.style.display = 'none';
-        }
-        flag = !flag;
-      });
-    </script>
-    </div><br> <br><br><br> <br> <br> <br>
-    <div class="header__last"> <br> <br> <br>
+    <nav class="navbar navbar-expand-lg navbar-light  bg-secondary " >
+      <a class="navbar-brand" href="#">
+        <img class="m-10"
+          src="images/Newfolder/logo.jpg"
+          width="40"
+          height="50"
+          style
+          alt="course101 logo"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-      <h1 class="header__motto">QUALITY EDUCATION FOR EVERYONE</h1>
-      <h2 class="header__mott">Thousands of videos for free</h2>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="courses.html">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="premium.html">Premium</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="on demand.html">Ondemand</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact us.html" id="header__link"
+              >Contact us</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+   
+    <br />
+    <br /><br /><br />
+    <br />
+    <br />
+    <br />
+    <div class="text-center pb-5">
+      <br />
+      <br />
+      <br />
+      <h1>QUALITY EDUCATION FOR EVERYONE</h1>
+      <h2>Thousands of videos for free</h2>
     </div>
   </header>
-
-<main class="main">
+<main class="container">
     <br>
-  <div class="main__bigbox">
-    
-    <div class="main__first">
-     <h1 class="main__quest">wanna deep dive ito the world of kowledge?</h1>
-      <img src="images/Newfolder/home1.jpg" alt="people in bookstore" class="main__firstimg">
+  <div class="">
+    <div class="row   ">
+     <div class="col my-auto  "><h1 class="text-info">wanna deep dive into knowledge?</h1></div>
+      <div class="col">
+      <img class="img-fluid "
+      src="images/Newfolder/home1.jpg" alt="people in bookstore">
+      </div>
       
     </div><hr>
-    <br><br>
-    <br><br>
+  
     <br>
-    <div class="main__box">
-      
-      <img src="images/Newfolder/home9.jpg" alt="we got u" class="main__img2">
+    <br>
+    <div class="container d-flex flex-column  text-center  ">
+
+      <img class="img-fluid w-75 alignn-self-center "
+      src="images/Newfolder/home9.jpg" alt="we got u" >
     
-      <hr><div class="main__flexother">
-      <p class="main__block">
+      <hr><div >
+      <p class="text-info">
       we have created premium courses for your satisfaction.
       </p>
-      <img src="images/Newfolder/home4.jpg" alt="pc picture" class="main__lastimg">
+      <img  class="img-fluid w-75 "
+      src="images/Newfolder/home4.jpg" alt="pc picture" >
       </div><hr>
     </div>
  </div>
-    <div>
+    <div class="container   w-75">
       
-      
-      <table class="main__table">
-        <caption class="main__cap"><b>Pricing</b></caption>
-        <th classs="main__th">Courses</th>
-        <th classs="main__th">Price/package</th>
-        <tr class="main__row">
-          <td class="main__td">Eco101</td>
-          <td class="main__td" >35br</td>
+      <caption class="text-info"><b >Pricing</b></caption>
+      <table class="table bg-secondary p-1 w-50 table-striped  ">
+        
+        <th scope="col">Courses</th>
+        <th scope="col">Price/package</th>
+        <tr><td>Eco101</td>
+          <td  >35br</td>
         </tr>
-        <tr class="main__row">
-          <td class="main__td">SE202</td>
-          <td class="main__td">50br</td>
+        <tr >
+          <td >SE202</td>
+          <td >50br</td>
         </tr>
-        <tr class="main__row">
-          <td class="main__td">Dsa</td>
-          <td class="main__td">45br</td>
+        <tr >
+          <td >Dsa</td>
+          <td >45br</td>
         </tr>
-        <tr class="main__row">
-          <td class="main__td">OOP</td>
-          <td class="main__td">23br</td>
+        <tr >
+          <td >OOP</td>
+          <td >23br</td>
         </tr>
-        <tr class="main__row">
-          <td class="main__td">Comparch</td>
-          <td class="main__td">40</td>
+        <tr >
+          <td >Comparch</td>
+          <td >40</td>
         </tr>
-        <tr class="main__row">
-          <td class="main__td">DIg.cir</td>
-          <td class="main__td">45br</td>
+        <tr >
+          <td >DIg.cir</td>
+          <td >45br</td>
         </tr>
       </table>
     </div>
     <br><br>
     <a href="soon.html
-    " class="main__link">to buy.</a>
+    " >to buy.</a>
     </main><br><br>
     <hr>
+    <footer class="bg-secondary">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h3 class="footer__block">CONTACT</h3>
+            <p class="footer__para">CITY:ADDIS ABABA</p>
+            <p class="footer__para">PHONE NUMBER:+251993535512</p>
+            <p class="footer__para">EMAIL:Course101@gmail.com</p>
+          </div>
 
-  <footer class="footer">
-        <div class="footer__column0">
-          <h3 class="footer__block">CONTACT</h3>
-          <p class="footer__para">CITY:ADDIS ABABA</p>
-          <p class="footer__para">PHONE NUMBER:+251993535512</p>
-          <p class="footer__para">EMAIL:Course101@gmail.com</p>
+          <div class="col-lg-4">
+            <p class="footer__para">FAQ</p>
+            <p class="footer__para">
+              <a href="PRIVACY.HTML" class="footer__link">PRIVACY POLICY</a>
+            </p>
+            <p class="footer__para">TERMS OF SERVICE</p>
+          </div>
+
+          <div class="col-lg-4">
+            <h2 class="footer__block">FOLLOW US ON</h2>
+            <img 
+              src="images/socialmedia.jpg"
+              alt="social links"
+              width="110px"
+              height="26px"
+            />
+            <p class="footer__para">
+              &copy;2022 courses101,all rights reserved.
+            </p>
+          </div>
         </div>
-        <div class="footer__column1">
-          <p class="footer__para">FAQ</p>
-          <p class="footer__para">
-            <a href=PRIVACY.HTML class="footer__link">PRIVACY POLICY</a>
-          </p>
-          <p class="footer__para">TERMS OF SERVICE</p>
-        </div>
-        <div class="footer__column2">
-          <h2 class="footer__block">FOLLOW US ON</h2>
-          <img src="images/socialmedia.jpg" alt="social links" width="110px" height="26px">
-          <p class="footer__para">&copy;2022 courses101,all rights reserved.</p>
-        </div>
-      </footer>
-  
-
-
-</body>
-
+      </div>
+    </footer>
+ 
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>
